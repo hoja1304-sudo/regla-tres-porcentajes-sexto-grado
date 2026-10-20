@@ -1,0 +1,405 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Problemas relacionados con regla de tres, porcentajes o proporcionalidad directa</title><style>
+.celebrate{position:fixed;inset:0;z-index:99;pointer-events:none;display:grid;place-items:center;background:#06253255;animation:fade 1.8s forwards}.celebrate div{font-size:clamp(55px,13vw,120px);text-align:center;animation:pop .55s ease-out}.celebrate b{display:block;color:#fff;font-size:clamp(22px,5vw,42px);text-shadow:0 3px 10px #000}.spark{position:absolute;font-size:42px;animation:burst 1.5s ease-out forwards}@keyframes pop{from{transform:scale(.2)}to{transform:scale(1)}}@keyframes burst{from{transform:translate(0,0) scale(.3);opacity:1}to{transform:translate(var(--x),var(--y)) scale(1.4);opacity:0}}@keyframes fade{0%,75%{opacity:1}100%{opacity:0}}
+.tabs{position:sticky;top:0;z-index:20;background:#fff;display:flex;justify-content:center;gap:12px;padding:14px;box-shadow:0 3px 14px #1232;flex-wrap:wrap}.tab{border:2px solid var(--blue);background:#fff;color:var(--blue);padding:12px 25px;border-radius:24px;font-weight:bold;cursor:pointer}.tab.active{background:var(--blue);color:#fff}.panel[hidden]{display:none}
+.theory-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 5px #dbe9e6;margin-bottom:20px}.theory-card h3{margin:0}.theory-card .big-eq{font-size:26px;font-weight:bold;margin:18px 0;color:var(--navy)}.theory-buttons{display:flex;flex-wrap:wrap;gap:10px}.theory-buttons button{border:0;border-radius:9px;padding:12px 15px;font-weight:bold;cursor:pointer}.process-btn{background:var(--blue);color:#fff}.solution-box{margin-top:16px;background:#edf7f5;border-radius:11px;padding:17px}.solution-box h4{margin:0 0 12px}.solve-step{display:flex;gap:10px;margin:10px 0;line-height:1.4}.solve-step>b{flex:none;width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:#fff}.solve-step span b{color:var(--navy)}
+.proportion{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin:16px 0}
+.fr{display:inline-flex;flex-direction:column;align-items:center;color:var(--navy);font-weight:bold}
+.fr .unit{font-size:12px;color:var(--blue);margin-bottom:5px;font-weight:bold;letter-spacing:.3px}
+.fr .fnum,.fr .fden{padding:3px 16px;font-size:23px;text-align:center}
+.fr .fnum{border-bottom:3px solid var(--navy)}
+.proportion .eq{font-size:27px;font-weight:bold;color:var(--coral)}
+.fr .xv{color:var(--coral)}
+.cross{display:inline-block;background:#fff;border:1px dashed #9db9b3;border-radius:8px;padding:6px 12px;font-weight:bold;color:var(--navy);margin:2px 0}
+.ifrac{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;font-weight:bold;margin:0 3px;line-height:1.05;color:var(--navy)}.ifrac .a{border-bottom:2.5px solid currentColor;padding:0 7px}.ifrac .b{padding:1px 7px 0}
+.video-btn{display:inline-flex;align-items:center;gap:7px;background:#c4302b;color:#fff;text-decoration:none;font-weight:bold;font-size:13px;padding:9px 15px;border-radius:999px;margin-bottom:16px;min-height:40px}.video-btn:hover{background:#a52722}.video-btn .yt{font-size:15px}
+.steps .proportion{margin:10px 0}.steps .fr .fnum,.steps .fr .fden{font-size:20px;padding:2px 13px}
+:root{--navy:#0a3043;--ink:#153849;--blue:#08708f;--coral:#ef704f;--cream:#fffaf0;--aqua:#e2f5f1;--line:#d6e6e3;--green:#197a55;--red:#bd3f3f}*{box-sizing:border-box}html{scroll-behavior:smooth;font-size:clamp(15px,0.35vw + 14px,18px)}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}.hero{background:var(--navy);color:#fff;padding:45px 7%;display:flex;justify-content:center;gap:50px;align-items:center;flex-wrap:wrap}.hero>div{max-width:650px}.eyebrow{color:#99d9d0;font-size:13px;font-weight:bold;letter-spacing:1px}.hero h1{font-size:clamp(28px,5.4vw,52px);line-height:1.05;margin:18px 0 12px}.hero p{font-size:19px;color:#d6edf0}.hero a{border:0;background:var(--coral);color:#fff;padding:14px 20px;border-radius:9px;font-weight:bold;text-decoration:none;cursor:pointer;display:inline-block}.bubble{flex:none;width:190px;height:190px;border-radius:50%;background:#f4c75f;color:var(--navy);display:grid;place-items:center;font-size:30px;font-weight:bold;transform:rotate(-4deg);box-shadow:14px 16px #0e536a;text-align:center;padding:10px}
+.author{display:inline-flex;align-items:center;gap:10px;margin-top:18px;padding:9px 16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:999px}.author .av{width:32px;height:32px;border-radius:50%;background:var(--coral);color:#fff;display:grid;place-items:center;font-weight:bold;font-size:13px;flex:none}.author .tx{line-height:1.25;font-size:13px;color:#e7f3f1}.author b{display:block;color:#fff;font-size:13px}
+.section{max-width:1080px;margin:auto;padding:56px 24px}.title{display:flex;gap:15px;align-items:center;margin-bottom:26px}.title>span{background:var(--coral);color:#fff;border-radius:50%;padding:11px;font-weight:bold}.title small{color:var(--blue);font-weight:bold;letter-spacing:2px}.title h2{font-size:clamp(24px,4vw,38px);margin:4px 0}.note{background:var(--aqua);border-left:6px solid #37a88f;padding:20px;border-radius:0 12px 12px 0;font-size:17px;line-height:1.5;margin-bottom:24px}
+.theory-menu{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:10px}.theory-menu-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px 22px;box-shadow:0 6px #dbe9e6;text-align:center;cursor:pointer;transition:.15s;min-height:44px}.theory-menu-card:hover{transform:translateY(-3px);box-shadow:0 10px #dbe9e6}.theory-menu-card .ic{font-size:44px;display:block;margin-bottom:12px}.theory-menu-card h3{margin:0 0 8px;color:var(--navy);font-size:19px}.theory-menu-card p{margin:0;color:var(--ink);font-size:14px;line-height:1.4}.theory-menu-card b{display:inline-block;margin-top:14px;color:var(--blue);font-size:14px}
+.back-btn{border:0;background:#e8f1ff;color:#28549f;padding:11px 16px;border-radius:9px;font-weight:bold;cursor:pointer;margin-bottom:22px;min-height:44px}
+@media(max-width:900px){.theory-menu{grid-template-columns:1fr}}
+.practice{background:#edf7f5;max-width:none}.practice>div{max-width:1000px;margin:auto}.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:0 5px #dbe9e6;margin-bottom:22px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.num{background:var(--navy);color:#fff;border-radius:50%;width:34px;height:34px;display:grid;place-items:center;font-weight:bold;flex:none}.tag{background:#e8f1ff;color:#28549f;border-radius:20px;padding:6px 10px;font-size:11px;font-weight:bold}
+.problem{font-size:17px;line-height:1.55;font-weight:bold}.given{background:var(--navy);color:#fff;text-align:center;padding:15px;border-radius:9px;font-size:22px;font-weight:bold;margin:14px 0}.given small{display:block;color:#98d9d0;font-size:10px;letter-spacing:2px;font-weight:bold}
+.options{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
+.opt{display:flex;align-items:center;gap:10px;border:2px solid var(--line);padding:11px 13px;border-radius:10px;cursor:pointer;font-weight:bold;background:#fff;min-height:44px}.opt input{position:absolute;opacity:0;width:0;height:0}
+.opt .dot{width:19px;height:19px;border-radius:50%;border:2.5px solid var(--blue);flex:none;position:relative}.opt .dot::after{content:'';position:absolute;inset:3px;border-radius:50%;background:var(--blue);opacity:0;transform:scale(.4);transition:.15s}
+.opt input:checked ~ .dot::after{opacity:1;transform:scale(1)}
+.opt:has(input:checked){background:#edf8fb;border-color:var(--blue)}
+.opt.is-correct{border-color:var(--green);background:#e9f8ef}.opt.is-correct .dot{border-color:var(--green)}.opt.is-correct .dot::after{background:var(--green);opacity:1;transform:scale(1)}
+.opt.is-wrong{border-color:var(--red);background:#fdecea}.opt.is-wrong .dot{border-color:var(--red)}.opt.is-wrong .dot::after{background:var(--red);opacity:1;transform:scale(1)}
+.opt.locked{cursor:default}
+.check{width:100%;margin-top:14px;background:var(--blue);border:0;color:#fff;padding:13px 18px;border-radius:9px;font-weight:bold;cursor:pointer;min-height:44px}.check:disabled{opacity:.5;cursor:default}
+.feedback{margin-top:14px;padding:15px 16px;border-radius:10px}.good{background:#e7f7ef;border:1px solid #9bd4b7}.bad{background:#fff0ef;border:1px solid #eab0ac}.feedback h3{margin:0;font-size:18px}.steps{border-top:1px solid #0002;margin-top:10px;padding-top:8px}.steps p{margin:7px 0}
+.new{background:var(--navy);color:#fff;text-align:center;padding:38px 20px;border-radius:16px;margin-top:10px}.new button{border:0;background:var(--coral);color:#fff;padding:13px 20px;border-radius:9px;font-weight:bold;cursor:pointer;font-size:16px;min-height:44px}
+footer{text-align:center;background:#062532;color:#acc8cd;padding:22px;font-size:13px;line-height:1.6}
+.table-wrap{overflow-x:auto}
+table.datos{border-collapse:collapse;margin:14px auto;font-size:1.02em}table.datos td,table.datos th{border:1px solid #ccd;padding:8px 12px;text-align:center}table.datos th{background:#eef6f4}
+@media(max-width:720px){.hero{display:block;padding:38px 20px;text-align:center}.bubble{width:150px;height:150px;margin:30px auto 0;font-size:22px}.section{padding:42px 16px}.options{grid-template-columns:1fr}.title{align-items:flex-start}.card{padding:16px}}
+</style></head><body>
+<header class="hero">
+  <div>
+    <div class="eyebrow">MATEMÁTICA · BLOQUE 4 · RELACIONES Y ÁLGEBRA · SEXTO GRADO</div>
+    <h1>Problemas relacionados con regla de tres, porcentajes o proporcionalidad directa</h1>
+    <p>Corresponde a los ítems 51, 52 y 53 · Resuelve problemas que involucren regla de tres, porcentajes y proporcionalidad directa.</p>
+    <a href="#teoria">Ver cómo se resuelve ↓</a>
+    <div class="author"><span class="av">AJ</span><span class="tx"><b>Elaborado por: Alberto Jiménez Ruiz</b>Asesor Regional de Matemática · DAP-DRE-Cartago 2026</span></div>
+  </div>
+  <div class="bubble">25% de 16000</div>
+</header>
+
+<nav class="tabs" aria-label="Secciones">
+  <button class="tab active" id="tabTheory" onclick="showTab('theory')">📖 Teoría</button>
+  <button class="tab" id="tabPractice" onclick="showTab('practice')">✏️ Práctica</button>
+</nav>
+
+<div class="panel" id="theoryPanel">
+  <section class="section" id="teoria">
+    <div class="title"><span>01</span><div><small>TEORÍA</small><h2>Elige qué quieres repasar</h2></div></div>
+    <div class="theory-menu">
+      <div class="theory-menu-card" onclick="showTheorySheet('regla')"><span class="ic">⚖️</span><h3>Regla de tres</h3><p>Cómo hallar un valor desconocido cuando dos cantidades varían juntas.</p><b>Entrar →</b></div>
+      <div class="theory-menu-card" onclick="showTheorySheet('pct')"><span class="ic">💯</span><h3>Porcentajes</h3><p>Calcular una parte, un descuento, un aumento o el total a partir de un %.</p><b>Entrar →</b></div>
+      <div class="theory-menu-card" onclick="showTheorySheet('prop')"><span class="ic">📈</span><h3>Proporcionalidad directa</h3><p>Reconocer y completar tablas donde dos cantidades crecen en la misma proporción.</p><b>Entrar →</b></div>
+    </div>
+  </section>
+
+  <section class="section" id="sheetRegla" hidden>
+    <button class="back-btn" onclick="backToTheoryMenu()">← Volver</button>
+    <div class="title"><span>⚖️</span><div><small>TEORÍA</small><h2>Regla de tres</h2></div></div>
+    <a class="video-btn" href="https://www.youtube.com/watch?v=N1vI94ySy94&t=179s" target="_blank" rel="noopener"><span class="yt">▶</span> Ver video: Regla de 3 súper fácil</a>
+    <div class="note">💡 La <b>regla de tres directa</b> se usa cuando dos cantidades varían juntas: si una crece, la otra también crece en la misma proporción. Con 3 datos conocidos se halla el cuarto escribiendo el problema como <b>dos razones (fracciones) igualadas</b> — una <b>proporción</b>.</div>
+    <div class="note">📍 <b>Cómo se plantea:</b> cada fracción reúne una misma magnitud (arriba un valor y abajo el otro, en el mismo orden en las dos razones):
+      <div class="proportion"><div class="fr"><span class="unit">magnitud A</span><span class="fnum">a</span><span class="fden">c</span></div><span class="eq">=</span><div class="fr"><span class="unit">magnitud B</span><span class="fnum">b</span><span class="fden xv">x</span></div></div>
+      Para hallar la <b>x</b> se <b>multiplican en diagonal</b> (cruzados) los dos números conocidos y ese resultado se <b>divide entre el número que sobra</b>: <span class="cross">x = (c × b) ÷ a</span>. Así no hace falta despejar ninguna ecuación.</div>
+    <div id="reglaExamples"></div>
+    <div class="new"><h2>¿Quieres otro ejemplo?</h2><button onclick="newTheoryRegla()">↻ Nuevo ejercicio</button></div>
+  </section>
+
+  <section class="section" id="sheetPct" hidden>
+    <button class="back-btn" onclick="backToTheoryMenu()">← Volver</button>
+    <div class="title"><span>💯</span><div><small>TEORÍA</small><h2>Porcentajes</h2></div></div>
+    <a class="video-btn" href="https://www.youtube.com/watch?v=ETvdnLWIFhU&t=281s" target="_blank" rel="noopener"><span class="yt">▶</span> Ver video: Porcentajes explicados</a>
+    <div class="note">💡 Un <b>porcentaje</b> es una razón con base 100: "P%" significa P de cada 100. Por eso se resuelve con el <b>mismo procedimiento de la regla de tres</b>: se plantea la proporción usando el 100%, se <b>multiplican en diagonal</b> los dos números conocidos y se <b>divide entre el que sobra</b> — sin despejar ecuaciones. Estas son las 4 situaciones más comunes.</div>
+    <div id="pctExamples"></div>
+    <div class="new"><h2>¿Quieres otros ejemplos?</h2><button onclick="newTheoryPct()">↻ Nuevos ejercicios</button></div>
+  </section>
+
+  <section class="section" id="sheetProp" hidden>
+    <button class="back-btn" onclick="backToTheoryMenu()">← Volver</button>
+    <div class="title"><span>📈</span><div><small>TEORÍA</small><h2>Proporcionalidad directa</h2></div></div>
+    <a class="video-btn" href="https://www.youtube.com/watch?v=nP9SwAqhVTI" target="_blank" rel="noopener"><span class="yt">▶</span> Ver video: Proporcionalidad directa</a>
+    <div class="note">💡 Dos cantidades son <b>directamente proporcionales</b> cuando su cociente (razón) siempre es el mismo número, llamado <b>constante de proporcionalidad (k)</b>: <b>k = y ÷ x</b>. Si se conoce k, cualquier valor faltante en una tabla se calcula multiplicando por k.</div>
+    <div id="propExamples"></div>
+    <div class="new"><h2>¿Quieres otro ejemplo?</h2><button onclick="newTheoryProp()">↻ Nuevo ejercicio</button></div>
+  </section>
+</div>
+
+<div class="panel" id="practicePanel" hidden>
+  <section class="section practice">
+    <div>
+      <div class="title"><span>02</span><div><small>PRÁCTICA</small><h2>Un ítem de cada tipo</h2></div></div>
+      <p>Tres ítems: uno de regla de tres, uno de porcentajes y uno de proporcionalidad directa. Marca una opción (se señala con un punto) y pulsa «Comprobar respuesta».</p>
+      <div id="practiceItems"></div>
+    </div>
+  </section>
+  <div class="section" style="padding-top:0"><div class="new"><h2>¿Listos para otros tres ítems?</h2><button onclick="newPractice()">↻ Otra práctica</button></div></div>
+</div>
+
+<footer>Problemas relacionados con regla de tres, porcentajes o proporcionalidad directa · Bloque 4, Relaciones y Álgebra<br>Elaborado por: Alberto Jiménez Ruiz — Asesor Regional de Matemática · DAP-DRE-Cartago 2026</footer>
+
+<script>
+/* ---------- utilidades ---------- */
+function rand(min,max){return Math.floor(Math.random()*(max-min+1))+min;}
+function pick(a){return a[Math.floor(Math.random()*a.length)];}
+function shuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=rand(0,i);[a[i],a[j]]=[a[j],a[i]];}return a;}
+function fmt(n){return n.toLocaleString('es-CR');}
+
+function celebrate(){let layer=document.createElement('div');layer.className='celebrate';layer.innerHTML='<div>🥳<b>¡Excelente trabajo!</b></div>'+['🎆','🎇','✨','🎉','🎆','✨','🎇','🎉'].map((x,i)=>`<span class="spark" style="--x:${Math.cos(i*.785)*260}px;--y:${Math.sin(i*.785)*260}px">${x}</span>`).join('');document.body.appendChild(layer);setTimeout(()=>layer.remove(),1800)}
+function numericDistractors(answer, extras){
+  const cand=new Set();
+  extras.forEach(v=>{ v=Math.round(v); if(v>0 && v!==answer && v>=answer/4 && v<=answer*4) cand.add(v); });
+  // paso base proporcional a la magnitud de la respuesta (evita ±1 junto a cifras grandes)
+  let step;
+  if(answer<=12) step=1;
+  else if(answer<=60) step=rand(2,4);
+  else { const pow=Math.pow(10, Math.max(0, String(Math.round(answer)).length-2)); step=pow; }
+  [1,-1,2,-2,3,-3].forEach(d=>{ const v=answer+d*step; if(v>0 && v!==answer) cand.add(Math.round(v)); });
+  let arr=shuffle([...cand]).slice(0,3);
+  let guard=0;
+  while(arr.length<3 && guard<80){ guard++; const v=answer+rand(-6,6)*step; if(v>0 && v!==answer && !arr.includes(Math.round(v))) arr.push(Math.round(v)); }
+  return arr.slice(0,3);
+}
+
+/* ==================== REGLA DE TRES ==================== */
+const REGLA_CONTEXTOS=[
+  {u1:'horas',u2:'colones',bmul:1100,frase:(a,b)=>`Por cada ${a} horas de trabajo, una persona gana ₡${fmt(b)}.`, askC:c=>`Si trabajó ${c} horas`, askD:'colones', askC2:d=>`Si ganó ₡${fmt(d)}`, askD2:'horas'},
+  {u1:'minutos',u2:'botellas',bmul:1,frase:(a,b)=>`Una máquina llena ${b} botellas en ${a} minutos, siempre a la misma velocidad.`, askC:c=>`En ${c} minutos`, askD:'botellas', askC2:d=>`Para llenar ${d} botellas`, askD2:'minutos'},
+  {u1:'kg',u2:'colones',bmul:850,frase:(a,b)=>`En una feria, ${a} kg de café cuestan ₡${fmt(b)}.`, askC:c=>`Si se compran ${c} kg`, askD:'colones', askC2:d=>`Si se pagó ₡${fmt(d)}`, askD2:'kg'},
+  {u1:'personas',u2:'colones',bmul:3200,frase:(a,b)=>`Una familia de ${a} personas gastó ₡${fmt(b)} en un almuerzo, todos consumiendo la misma proporción.`, askC:c=>`Para una familia de ${c} personas`, askD:'colones', askC2:d=>`Si una familia gastó ₡${fmt(d)}`, askD2:'personas'},
+  {u1:'litros',u2:'km',bmul:1,frase:(a,b)=>`Con ${a} litros de gasolina, un carro recorre ${b} km, siempre al mismo rendimiento.`, askC:c=>`Con ${c} litros`, askD:'km', askC2:d=>`Para recorrer ${d} km`, askD2:'litros'}
+];
+function genRegla(){
+  const ctx=pick(REGLA_CONTEXTOS);
+  const a=rand(2,8), b=a*rand(2,9)*ctx.bmul;
+  const k=rand(2,7);
+  const reverse=Math.random()<0.5;
+  let given, askText, answer, steps, prop;
+  if(!reverse){
+    // fila 1: (a u1, b u2)  ·  fila 2: (c u1, x u2)   ->  a/c = b/x  ; cruzados: c y b, sobra: a
+    const c=a*k, d=b*k;
+    given=ctx.askC(c); answer=d; askText=`¿cuántos ${ctx.askD} corresponden?`;
+    prop={u1:ctx.u1, u2:ctx.u2, u1r1:a, u1r2:c, u2r1:b, u2r2:'x', unknown:'u2r2'};
+    steps=[
+      {t:`Se ordenan los datos como dos razones iguales. La razón de <b>${ctx.u1}</b> se iguala con la razón de <b>${ctx.u2}</b> (cada valor conocido en su lugar):`, prop},
+      {t:`Se <b>multiplican en diagonal</b> (cruzados) los dos números conocidos: <span class="cross">${fmt(c)} × ${fmt(b)} = ${fmt(c*b)}</span>`},
+      {t:`Ese resultado se <b>divide entre el número que sobra</b> (${a}): <span class="cross">${fmt(c*b)} ÷ ${a} = ${fmt(d)}</span>. Entonces x = <b>${fmt(d)}</b>.`},
+      {t:`Comprobación: ${fmt(c)} ÷ ${a} = ${fmt(c/a)}, y ${fmt(b)} × ${fmt(c/a)} = ${fmt(d)}. ✓`}
+    ];
+  } else {
+    // fila 1: (a u1, b u2)  ·  fila 2: (x u1, c u2)   ->  a/x = b/c  ; cruzados: a y c, sobra: b
+    const d=a*k, c=b*k;
+    given=ctx.askC2(c); answer=d; askText=`¿cuántos ${ctx.askD2} corresponden?`;
+    prop={u1:ctx.u1, u2:ctx.u2, u1r1:a, u1r2:'x', u2r1:b, u2r2:c, unknown:'u1r2'};
+    steps=[
+      {t:`Se ordenan los datos como dos razones iguales. La razón de <b>${ctx.u1}</b> se iguala con la razón de <b>${ctx.u2}</b> (cada valor conocido en su lugar):`, prop},
+      {t:`Se <b>multiplican en diagonal</b> (cruzados) los dos números conocidos: <span class="cross">${a} × ${fmt(c)} = ${fmt(a*c)}</span>`},
+      {t:`Ese resultado se <b>divide entre el número que sobra</b> (${fmt(b)}): <span class="cross">${fmt(a*c)} ÷ ${fmt(b)} = ${fmt(d)}</span>. Entonces x = <b>${fmt(d)}</b>.`},
+      {t:`Comprobación: ${fmt(c)} ÷ ${fmt(b)} = ${fmt(c/b)}, y ${a} × ${fmt(c/b)} = ${fmt(d)}. ✓`}
+    ];
+  }
+  return {intro:ctx.frase(a,b), given, askText, answer, steps};
+}
+function proportionHTML(p){
+  const cell=(v,isX)=>isX?`<span class="xv">x</span>`:fmt(v);
+  return `<div class="proportion"><div class="fr"><span class="unit">${p.u1}</span><span class="fnum">${cell(p.u1r1,p.unknown==='u1r1')}</span><span class="fden">${cell(p.u1r2,p.unknown==='u1r2')}</span></div><span class="eq">=</span><div class="fr"><span class="unit">${p.u2}</span><span class="fnum">${cell(p.u2r1,p.unknown==='u2r1')}</span><span class="fden">${cell(p.u2r2,p.unknown==='u2r2')}</span></div></div>`;
+}
+
+/* ==================== PORCENTAJES ==================== */
+function genPct(kindForced){
+  const kind = kindForced || pick(['parte','descuento','aumento','hallarTotal','hallarPorcentaje']);
+  const P = pick([5,10,15,20,25,30,40,50,60,75]);
+  const isMoney = (kind==='parte'||kind==='descuento'||kind==='aumento');
+  const N = isMoney ? rand(3,40)*500 : rand(3,20)*20;
+  let answer, expr, steps, question;
+  if(kind==='parte'){
+    answer = N*P/100;
+    expr = `¿Cuánto es el ${P}% de ₡${fmt(N)}?`;
+    steps=[
+      {t:`El porcentaje también es una regla de tres: el <b>total</b> (₡${fmt(N)}) es el <b>100%</b>, y buscamos cuánto es el ${P}%. Se plantea como dos razones iguales (${P} de cada 100):`, prop:{u1:'%', u2:'cantidad (₡)', u1r1:100, u1r2:P, u2r1:N, u2r2:'x', unknown:'u2r2'}},
+      {t:`Se <b>multiplican en diagonal</b> los dos números conocidos: <span class="cross">${P} × ${fmt(N)} = ${fmt(P*N)}</span>`},
+      {t:`Se <b>divide entre el número que sobra</b> (100): <span class="cross">${fmt(P*N)} ÷ 100 = ${fmt(answer)}</span>. Entonces x = <b>₡${fmt(answer)}</b>.`},
+      {t:`El ${P}% de ₡${fmt(N)} es ₡${fmt(answer)}.`}];
+    question=expr;
+  } else if(kind==='descuento'){
+    answer = N*(100-P)/100;
+    steps=[
+      {t:`Un descuento del ${P}% deja por pagar el <b>${100-P}%</b>. Se plantea como regla de tres: el precio total (₡${fmt(N)}) es el 100% y buscamos cuánto es el ${100-P}%:`, prop:{u1:'%', u2:'cantidad (₡)', u1r1:100, u1r2:100-P, u2r1:N, u2r2:'x', unknown:'u2r2'}},
+      {t:`Se <b>multiplican en diagonal</b> los dos números conocidos: <span class="cross">${100-P} × ${fmt(N)} = ${fmt((100-P)*N)}</span>`},
+      {t:`Se <b>divide entre el número que sobra</b> (100): <span class="cross">${fmt((100-P)*N)} ÷ 100 = ${fmt(answer)}</span>. Entonces x = <b>₡${fmt(answer)}</b>.`},
+      {t:`El precio final es ₡${fmt(answer)}.`}];
+    question=`Un artículo cuesta ₡${fmt(N)} y tiene un descuento del ${P}%. ¿Cuál es el precio final?`;
+  } else if(kind==='aumento'){
+    answer = N*(100+P)/100;
+    steps=[
+      {t:`Un aumento del ${P}% hace pagar el <b>${100+P}%</b>. Se plantea como regla de tres: el precio original (₡${fmt(N)}) es el 100% y buscamos cuánto es el ${100+P}%:`, prop:{u1:'%', u2:'cantidad (₡)', u1r1:100, u1r2:100+P, u2r1:N, u2r2:'x', unknown:'u2r2'}},
+      {t:`Se <b>multiplican en diagonal</b> los dos números conocidos: <span class="cross">${100+P} × ${fmt(N)} = ${fmt((100+P)*N)}</span>`},
+      {t:`Se <b>divide entre el número que sobra</b> (100): <span class="cross">${fmt((100+P)*N)} ÷ 100 = ${fmt(answer)}</span>. Entonces x = <b>₡${fmt(answer)}</b>.`},
+      {t:`El precio final es ₡${fmt(answer)}.`}];
+    question=`Un producto cuesta ₡${fmt(N)} y su precio aumenta un ${P}%. ¿Cuál es el precio final?`;
+  } else if(kind==='hallarTotal'){
+    const K = N*P/100;
+    answer = N;
+    steps=[
+      {t:`Se conoce la parte (${fmt(K)}), que es el <b>${P}%</b>, y se busca el <b>total</b> (el 100%). Se plantea como regla de tres:`, prop:{u1:'%', u2:'cantidad', u1r1:P, u1r2:100, u2r1:K, u2r2:'x', unknown:'u2r2'}},
+      {t:`Se <b>multiplican en diagonal</b> los dos números conocidos: <span class="cross">100 × ${fmt(K)} = ${fmt(100*K)}</span>`},
+      {t:`Se <b>divide entre el número que sobra</b> (${P}): <span class="cross">${fmt(100*K)} ÷ ${P} = ${fmt(answer)}</span>. Entonces x = <b>${fmt(answer)}</b>.`},
+      {t:`El total es ${fmt(answer)}.`}];
+    question=`El ${P}% de un grupo de personas equivale a ${fmt(K)} personas. ¿Cuál es el total de personas del grupo?`;
+  } else {
+    const F = N*(100-P)/100;
+    answer = P;
+    steps=[
+      {t:`Primero, ¿cuánto bajó? ${fmt(N)} − ${fmt(F)} = <b>${fmt(N-F)}</b>. Ahora se busca qué porcentaje es ${fmt(N-F)} del total ${fmt(N)}. Como regla de tres, el total (${fmt(N)}) es el 100%:`, prop:{u1:'cantidad', u2:'%', u1r1:N, u1r2:N-F, u2r1:100, u2r2:'x', unknown:'u2r2'}},
+      {t:`Se <b>multiplican en diagonal</b> los dos números conocidos: <span class="cross">${fmt(N-F)} × 100 = ${fmt((N-F)*100)}</span>`},
+      {t:`Se <b>divide entre el número que sobra</b> (${fmt(N)}): <span class="cross">${fmt((N-F)*100)} ÷ ${fmt(N)} = ${answer}</span>. Entonces x = <b>${answer}%</b>.`},
+      {t:`El porcentaje de disminución es ${answer}%.`}];
+    question=`Una cantidad bajó de ${fmt(N)} a ${fmt(F)}. ¿Qué porcentaje bajó?`;
+  }
+  return {kind, question, answer, steps, N, P};
+}
+const PCT_TABLE_EMPLOYEES=['Jorge','Luis','Daniel','Karla','Ana','Marco'];
+function genPctTabla(){
+  const names=shuffle(PCT_TABLE_EMPLOYEES).slice(0,3);
+  const rows=names.map(n=>{ const sal=rand(4,15)*100000, pct=pick([2,3,4,5,6,8,10]); return {n, sal, pct, ahorro:sal*pct/100}; });
+  let best=rows[0]; rows.forEach(r=>{ if(r.ahorro>best.ahorro) best=r; });
+  const table=`<div class="table-wrap"><table class="datos"><tr><th>Empleado</th><th>Salario (₡)</th><th>% para ahorro</th></tr>${rows.map(r=>`<tr><td>${r.n}</td><td>${fmt(r.sal)}</td><td>${r.pct}%</td></tr>`).join('')}</table></div>`;
+  const steps=[`Para cada persona se aplica el mismo procedimiento del porcentaje: se multiplica el salario por el porcentaje y se divide entre 100.`].concat(rows.map(r=>`${r.n}: ${fmt(r.sal)} × ${r.pct} ÷ 100 = ₡${fmt(r.ahorro)}.`)).concat([`El monto más alto es el de ${best.n} (₡${fmt(best.ahorro)}). Por eso ahorra más ${best.n}.`]);
+  return {question:`<p>La siguiente tabla muestra el salario de tres personas y el porcentaje que destinan al ahorro:</p>${table}<p>De acuerdo con la información anterior, ¿quién ahorra más dinero?</p>`, options:names, answer:best.n, steps};
+}
+
+/* ==================== PROPORCIONALIDAD DIRECTA (tablas) ==================== */
+const PROP_CONTEXTOS=[
+  {label:'Flores', label2:'Colibríes', noun:'colibríes que llegan según la cantidad de flores en un jardín'},
+  {label:'Días', label2:'Páginas leídas', noun:'páginas que lee una persona según los días transcurridos, siempre al mismo ritmo'},
+  {label:'Cajas', label2:'Manzanas', noun:'manzanas empacadas según la cantidad de cajas'},
+  {label:'Entradas vendidas', label2:'Colones recaudados (en miles)', noun:'colones recaudados (en miles) según las entradas vendidas'}
+];
+function genProp(){
+  const ctx=pick(PROP_CONTEXTOS);
+  const q=pick([2,3,4,5]), p=pick([1,2,3].filter(x=>x!==q));
+  const base=[q,2*q,3*q,4*q];
+  const missingIdx=rand(0,3);
+  const findY=Math.random()<0.6;
+  const xs=base, ys=base.map(x=>x*p/q);
+  const answer = findY ? ys[missingIdx] : xs[missingIdx];
+  const rowX=xs.map((x,i)=>i===missingIdx && !findY ? '■' : x);
+  const rowY=ys.map((y,i)=>i===missingIdx && findY ? '■' : y);
+  const table=`<div class="table-wrap"><table class="datos"><tr><th>${ctx.label}</th>${rowX.map(v=>`<td>${v}</td>`).join('')}</tr><tr><th>${ctx.label2}</th>${rowY.map(v=>`<td>${v}</td>`).join('')}</tr></table></div>`;
+  // columna de referencia (totalmente conocida) para armar la proporción
+  const refIdx = missingIdx===0?1:0;
+  const rx=xs[refIdx], ry=ys[refIdx];
+  let prop, crossLine, solveLine;
+  if(findY){ // ■ está en la fila de label2 (denominador derecho) ; cruzados: xs[missingIdx] y ry, sobra: rx
+    prop={u1:ctx.label, u2:ctx.label2, u1r1:rx, u1r2:xs[missingIdx], u2r1:ry, u2r2:'x', unknown:'u2r2'};
+    crossLine=`Se <b>multiplican en diagonal</b> (cruzados) los dos números conocidos: <span class="cross">${xs[missingIdx]} × ${ry} = ${xs[missingIdx]*ry}</span>`;
+    solveLine=`Ese resultado se <b>divide entre el número que sobra</b> (${rx}): <span class="cross">${xs[missingIdx]*ry} ÷ ${rx} = ${answer}</span>. Entonces x = <b>${answer}</b>.`;
+  } else { // ■ está en la fila de label (denominador izquierdo) ; cruzados: rx y ys[missingIdx], sobra: ry
+    prop={u1:ctx.label, u2:ctx.label2, u1r1:rx, u1r2:'x', u2r1:ry, u2r2:ys[missingIdx], unknown:'u1r2'};
+    crossLine=`Se <b>multiplican en diagonal</b> (cruzados) los dos números conocidos: <span class="cross">${rx} × ${ys[missingIdx]} = ${rx*ys[missingIdx]}</span>`;
+    solveLine=`Ese resultado se <b>divide entre el número que sobra</b> (${ry}): <span class="cross">${rx*ys[missingIdx]} ÷ ${ry} = ${answer}</span>. Entonces x = <b>${answer}</b>.`;
+  }
+  const steps=[
+    {t:`Como las dos cantidades son directamente proporcionales, se toma una columna conocida y se iguala su razón con la del valor buscado (■ = x):`, prop},
+    {t:crossLine},
+    {t:solveLine},
+    {t:`El valor de ■ es <b>${answer}</b>.`}
+  ];
+  return {question:`<p>La siguiente tabla muestra ${ctx.noun}:</p>${table}<p>De acuerdo con la información anterior, si el patrón se mantiene, ¿cuál es el valor de ■?</p>`, answer, steps, forTheory:{ctx,xs,ys,p,q}};
+}
+
+/* ==================== renderizado comun de practica ==================== */
+function optionsHTML(name, options){
+  return `<div class="options">${options.map((o)=>`<label class="opt" data-value="${o}"><input type="radio" name="${name}" value="${o}"><span class="dot"></span><span>${typeof o==='number'?fmt(o):o}</span></label>`).join('')}</div>`;
+}
+function stepsHTML(steps){ return steps.map((s,j)=>{ const text=(typeof s==='string')?s:s.t; const extra=(typeof s==='object'&&s.prop)?proportionHTML(s.prop):''; return `<p><b>${j+1}.</b> ${text}</p>${extra}`; }).join(''); }
+function fracHTML(a,b){ return `<span class="ifrac"><span class="a">${a}</span><span class="b">${b}</span></span>`; }
+function checkPracticeItem(cardEl){
+  const sel=cardEl.querySelector('input:checked');
+  const out=cardEl.querySelector('.result');
+  if(!sel){ out.innerHTML='<div class="feedback bad">Selecciona una opción antes de comprobar.</div>'; return; }
+  const answer=cardEl.dataset.answer;
+  const ok = sel.value===answer;
+  cardEl.querySelectorAll('.opt').forEach(o=>{
+    o.classList.add('locked');
+    o.querySelector('input').disabled=true;
+    if(o.dataset.value===answer) o.classList.add('is-correct');
+    else if(o===sel.closest('.opt')) o.classList.add('is-wrong');
+  });
+  cardEl.querySelector('.check').disabled=true;
+  if(ok){
+    out.innerHTML=`<div class="feedback good"><h3>✓ ¡Correcto!</h3></div>`;
+    celebrate();
+  } else {
+    out.innerHTML=`<div class="feedback bad"><h3>✕ La respuesta correcta es ${typeof answer==='number'?fmt(answer):answer}.</h3><div class="steps"><b>Así se resuelve</b>${cardEl.querySelector('template').innerHTML}</div></div>`;
+  }
+}
+
+/* ---------- item de practica 1: regla de tres ---------- */
+function practiceRegla(){
+  const r=genRegla();
+  const options=shuffle([r.answer, ...numericDistractors(r.answer,[])]);
+  return {
+    typeLabel:'Ítem 1 · Regla de tres',
+    question:`<p>Considere la siguiente información:</p><p>${r.intro}</p><p>${r.given}, ${r.askText}</p>`,
+    options, answer:r.answer, steps:r.steps
+  };
+}
+/* ---------- item de practica 2: porcentajes ---------- */
+function practicePct(){
+  const useTabla=Math.random()<0.3;
+  if(useTabla){
+    const t=genPctTabla();
+    return {typeLabel:'Ítem 2 · Porcentajes', question:`<p>Considere la siguiente información:</p>${t.question}`, options:shuffle(t.options), answer:t.answer, steps:t.steps};
+  }
+  const p=genPct();
+  const options=shuffle([p.answer, ...numericDistractors(p.answer,[p.N,p.P])]);
+  return {typeLabel:'Ítem 2 · Porcentajes', question:`<p>Considere la siguiente información:</p><p>${p.question}</p>`, options, answer:p.answer, steps:p.steps};
+}
+/* ---------- item de practica 3: proporcionalidad directa ---------- */
+function practiceProp(){
+  const t=genProp();
+  const options=shuffle([t.answer, ...numericDistractors(t.answer,[t.forTheory.p,t.forTheory.q])]);
+  return {typeLabel:'Ítem 3 · Proporcionalidad directa', question:t.question, options, answer:t.answer, steps:t.steps};
+}
+
+function practiceCard(item, idx){
+  const name='pr'+idx;
+  return `<article class="card" data-answer="${item.answer}">
+    <div class="top"><span class="num">${idx+1}</span><span class="tag">${item.typeLabel}</span></div>
+    <div class="problem">${item.question}</div>
+    ${optionsHTML(name, item.options)}
+    <button class="check" onclick="checkPracticeItem(this.closest('.card'))">Comprobar respuesta</button>
+    <div class="result"></div>
+    <template>${stepsHTML(item.steps)}</template>
+  </article>`;
+}
+function newPractice(){
+  const items=[practiceRegla(), practicePct(), practiceProp()];
+  document.getElementById('practiceItems').innerHTML = items.map(practiceCard).join('');
+  showTab('practice');
+}
+
+/* ==================== TEORIA: regla de tres ==================== */
+let theoryReglaData=genRegla();
+function renderTheoryRegla(){
+  const r=theoryReglaData;
+  document.getElementById('reglaExamples').innerHTML=`<article class="theory-card"><h3>⚖️ Ejemplo</h3><p>${r.intro}</p><p><b>${r.given}</b>, ${r.askText}</p><div class="theory-buttons"><button class="process-btn" onclick="showProcessRegla()">Ver proceso de solución</button></div><div id="reglaOut"></div></article>`;
+}
+function showProcessRegla(){
+  const r=theoryReglaData;
+  const stepsHTMLp = r.steps.map((s,j)=>`<div class="solve-step"><b>${j+1}</b><span>${s.t}${s.prop?proportionHTML(s.prop):''}</span></div>`).join('');
+  document.getElementById('reglaOut').innerHTML=`<div class="solution-box"><h4>Proceso de solución</h4>${stepsHTMLp}<div class="solve-step"><b>✓</b><span>Respuesta: <b>${fmt(r.answer)}</b>.</span></div></div>`;
+}
+function newTheoryRegla(){theoryReglaData=genRegla();renderTheoryRegla()}
+
+/* ==================== TEORIA: porcentajes (4 casos fijos) ==================== */
+let theoryPctData=[];
+function makeTheoryPct(){ return ['parte','descuento','aumento','hallarTotal'].map(k=>genPct(k)); }
+function renderTheoryPct(){
+  theoryPctData=makeTheoryPct();
+  document.getElementById('pctExamples').innerHTML=theoryPctData.map((p,i)=>{
+    const titles={parte:'Calcular una parte',descuento:'Descuento',aumento:'Aumento',hallarTotal:'Hallar el total'};
+    return `<article class="theory-card"><h3>💯 ${titles[p.kind]}</h3><p>${p.question}</p><div class="theory-buttons"><button class="process-btn" onclick="showProcessPct(${i})">Ver proceso de solución</button></div><div id="pctOut${i}"></div></article>`;
+  }).join('');
+}
+function showProcessPct(i){
+  const p=theoryPctData[i];
+  const html=p.steps.map((s,j)=>{ const text=(typeof s==='string')?s:s.t; const extra=(typeof s==='object'&&s.prop)?proportionHTML(s.prop):''; return `<div class="solve-step"><b>${j+1}</b><span>${text}${extra}</span></div>`; }).join('');
+  document.getElementById('pctOut'+i).innerHTML=`<div class="solution-box"><h4>Proceso de solución</h4>${html}</div>`;
+}
+function newTheoryPct(){renderTheoryPct()}
+
+/* ==================== TEORIA: proporcionalidad directa ==================== */
+let theoryPropData=genProp();
+function renderTheoryProp(){
+  document.getElementById('propExamples').innerHTML=`<article class="theory-card"><h3>📈 Ejemplo</h3>${theoryPropData.question}<div class="theory-buttons"><button class="process-btn" onclick="showProcessProp()">Ver proceso de solución</button></div><div id="propOut"></div></article>`;
+}
+function showProcessProp(){
+  const t=theoryPropData;
+  const html=t.steps.map((s,j)=>`<div class="solve-step"><b>${j+1}</b><span>${s.t}${s.prop?proportionHTML(s.prop):''}</span></div>`).join('');
+  document.getElementById('propOut').innerHTML=`<div class="solution-box"><h4>Proceso de solución</h4>${html}</div>`;
+}
+function newTheoryProp(){theoryPropData=genProp();renderTheoryProp()}
+
+/* ---------- tabs y navegacion de teoria ---------- */
+function showTab(tab){['theory','practice'].forEach(x=>{document.getElementById(x+'Panel').hidden=x!==tab;document.getElementById('tab'+x[0].toUpperCase()+x.slice(1)).classList.toggle('active',x===tab)});if(tab==='theory')backToTheoryMenu();window.scrollTo({top:document.querySelector('.tabs').offsetTop,behavior:'smooth'})}
+const THEORY_SHEETS={regla:'sheetRegla',pct:'sheetPct',prop:'sheetProp'};
+function showTheorySheet(name){document.getElementById('teoria').hidden=true;Object.values(THEORY_SHEETS).forEach(id=>document.getElementById(id).hidden=true);document.getElementById(THEORY_SHEETS[name]).hidden=false;window.scrollTo({top:document.querySelector('.tabs').offsetTop,behavior:'smooth'})}
+function backToTheoryMenu(){document.getElementById('teoria').hidden=false;Object.values(THEORY_SHEETS).forEach(id=>document.getElementById(id).hidden=true)}
+
+renderTheoryRegla();
+renderTheoryPct();
+renderTheoryProp();
+newPractice();
+showTab('theory');
+</script></body></html>
